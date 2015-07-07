@@ -1,13 +1,12 @@
 __author__ = 'Stefan Contiu'
 
-# RESULTS LOG : June 30th, 2015
-# Accuracy :  0.998148148148
+# RESULTS LOG : July 7th, 2015
+# Accuracy :  0.993837304848
 # Confusion Matrix :
-# [[343   0   0   0]
-# [  0  13   0   0]
-# [  0   0  84   1]
-# [  0   0   0  99]]
-
+# [[3044   11    2    1]
+# [   2   83    0    0]
+# [   0    0  766   13]
+# [   0    0    1  945]]
 from time import time
 
 ###############################################
@@ -20,9 +19,9 @@ features_train = genfromtxt('d:/CODE/ml-crops/preproc/dataset/features_test.csv'
 classes_train = genfromtxt('d:/CODE/ml-crops/preproc/dataset/classes_test.csv', delimiter=',')
 
 ###############################################
-# perform SVM classification
-from sklearn.svm import SVC
-clf = SVC(kernel='linear')
+# perform DecisionTree classification
+from sklearn import tree
+clf = tree.DecisionTreeClassifier()
 fit_start_time = time()
 clf.fit(features_train, classes_train)
 fit_end_time = time()
