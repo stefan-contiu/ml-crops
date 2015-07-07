@@ -3,7 +3,7 @@ Machine learning experiments for classifying crops from satelite multi-spectral 
 
 Covers the following aspects:
 * pre-processing and constructing training, cross-validation and testing sets.
-* applying various classifiers: naive bayes, SVM, neural networks etc.
+* applying various classifiers: naive bayes, SVM, decision trees, neural networks etc.
 * analyzing results by confusion matrix, kappa coeficient etc.
 * displaying classification results in GIS like software.
 * drafting a research paper.
